@@ -15,5 +15,6 @@ RUN certtool --generate-privkey --outfile /opt/certs/ca-key.pem && certtool --ge
 ADD ./bin /usr/local/bin
 RUN chmod a+x /usr/local/bin/*
 
+export 80
 WORKDIR /etc/ocserv
 CMD ["vpn_run"]
